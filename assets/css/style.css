@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+
+header {
+    background: #64b5f6;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #64b5f6;
+}
+
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.biodata p {
+    margin: 8px 0;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #64b5f6;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e3f2fd;
+    color: #0d47a1;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+h1 a:hover {
+    background: white;
+    color: #64b5f6;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table:first-of-type {
+    margin: 15px auto;
+    background: #64b5f6;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+table:first-of-type td {
+    padding: 10px 20px;
+}
+
+table:first-of-type a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+table:first-of-type a:hover {
+    background: white;
+    color: #64b5f6;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background: #64b5f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: #64b5f6;
+    border: 1px solid #64b5f6;
+}
+
+table:nth-of-type(2) {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+th {
+    background: #64b5f6;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th, td {
+    border-bottom: 1px solid #e3f2fd;
+}
+
+tr:hover td {
+    background: #f1faff;
+}
+
+img {
+    border-radius: 10px;
+    border: 2px solid #64b5f6;
+}
+
+hr + table {
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+hr + table td {
+    padding: 10px;
+    border: 1px solid #64b5f6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+.inline {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
