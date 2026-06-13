@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +10,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #e3f2fd;
-    color: #0d47a1;
+    background: #eef7ff;
+    color: #333;
 }
 
+/* =========================
+   HEADER & NAVBAR
+========================= */
+
 header {
-    background: #64b5f6;
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
     color: white;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 header h1 {
@@ -24,252 +33,240 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
-    font-weight: 600;
+    text-decoration: none;
     padding: 8px 15px;
     border-radius: 20px;
     transition: 0.3s;
+    font-weight: 500;
 }
 
 nav a:hover {
     background: white;
-    color: #64b5f6;
+    color: #1e88e5;
 }
 
 main {
     padding: 30px;
-    text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1565c0;
 }
 
-.card {
-    background: white;
-    max-width: 500px;
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-page .card {
+    max-width: 700px;
     margin: auto;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
 
-.card:hover {
+.home-page .card:hover {
     transform: translateY(-5px);
 }
 
-.card img {
+.home-page .card img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.home-page .biodata {
+    padding: 20px;
+}
+
+.home-page .biodata p {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   MAHASISWA PAGE
+========================= */
+
+.mahasiswa-page .btn-tambah {
+    display: inline-block;
+    background: #1e88e5;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
     border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.biodata p {
-    margin: 8px 0;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 15px;
-    background: #64b5f6;
-    color: white;
-}
-
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #e3f2fd;
-    color: #0d47a1;
-}
-
-h1 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-h1 a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 20px;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
-h1 a:hover {
+.mahasiswa-page .btn-tambah:hover {
+    background: #1565c0;
+}
+
+.mahasiswa-page table {
+    width: 100%;
     background: white;
-    color: #64b5f6;
-}
-
-h2 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-table:first-of-type {
-    margin: 15px auto;
-    background: #64b5f6;
-    border-radius: 30px;
-    overflow: hidden;
-}
-
-table:first-of-type td {
-    padding: 10px 20px;
-}
-
-table:first-of-type a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-table:first-of-type a:hover {
-    background: white;
-    color: #64b5f6;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    background: #64b5f6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: white;
-    color: #64b5f6;
-    border: 1px solid #64b5f6;
-}
-
-table:nth-of-type(2) {
-    margin: 20px auto;
     border-collapse: collapse;
-    background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-th {
-    background: #64b5f6;
+.mahasiswa-page th {
+    background: #1e88e5;
     color: white;
-    padding: 10px;
+    padding: 15px;
 }
 
-td {
-    padding: 10px;
+.mahasiswa-page td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
     text-align: center;
 }
 
-th, td {
-    border-bottom: 1px solid #e3f2fd;
+.mahasiswa-page tr:hover {
+    background: #f5fbff;
 }
 
-tr:hover td {
-    background: #f1faff;
-}
-
-img {
+.mahasiswa-page table img {
+    width: 90px;
     border-radius: 10px;
-    border: 2px solid #64b5f6;
+    border: 3px solid #90caf9;
 }
 
-hr + table {
-    margin: 30px auto;
+.btn-tambah {
+    display: inline-block;
+    background: #1e88e5;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-tambah:hover {
+    background: #1565c0;
+}
+
+.btn-edit,
+.btn-hapus {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-edit {
+    background: #43a047;
+    margin-right: 8px;
+}
+
+.btn-edit:hover {
+    background: #2e7d32;
+}
+
+.btn-hapus {
+    background: #e53935;
+}
+
+.btn-hapus:hover {
+    background: #c62828;
+}
+
+/* =========================
+   TAMBAH DATA PAGE
+========================= */
+
+.tambah-page .card {
+    max-width: 600px;
+    margin: auto;
     background: white;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-hr + table td {
-    padding: 10px;
-    border: 1px solid #64b5f6;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 250px;
-}
-
-@media (max-width: 600px) {
-    table {
-        width: 95%;
-    }
-
-    img {
-        width: 100px;
-    }
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: 600;
+    color: #1565c0;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-group input {
     width: 100%;
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+    border: 2px solid #bbdefb;
+    border-radius: 10px;
+    outline: none;
 }
 
-.form-group textarea {
-    resize: none;
-    height: 80px;
+.form-group input:focus {
+    border-color: #1e88e5;
 }
 
-.inline {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #1e88e5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .home-page .card,
+    .tambah-page .card {
+        width: 95%;
+    }
+
+    .mahasiswa-page table {
+        display: block;
+        overflow-x: auto;
+    }
 }

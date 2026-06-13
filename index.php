@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+
+<body class="home-page">
 
     <header>
         <h1>WEB TI UNIMUS</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="mahasiswa.html">Data Mahasiswa</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+            <a href="mahasiswa.php">Data Mahasiswa</a>
         </nav>
     </header>
 
@@ -23,7 +24,7 @@
         <h2>TEKNOLOGI INFORMASI 2026</h2>
 
         <div class="card">
-            <img src="https://pict.sindonews.net/dyn/850/pena/news/2026/01/22/34/1668855/muka-sering-dijadiin-meme-bahlil-sebut-ada-intervensi-asing-vwv.jpeg" />
+            <img src="https://pict.sindonews.net/dyn/850/pena/news/2026/01/22/34/1668855/muka-sering-dijadiin-meme-bahlil-sebut-ada-intervensi-asing-vwv.jpeg" alt="Foto Profil"/>
 
             <div class="biodata">
                 <p><strong>Nama:</strong> Fadhil Anshor</p>

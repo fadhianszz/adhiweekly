@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Mahasiswa | TI UNIMUS</title>
+    <title>Tambah Mahasiswa - TI UNIMUS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
+<body class="tambah-page">
     <header>
         <h1>WEB TI UNIMUS</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="mahasiswa.html">Data Mahasiswa</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+            <a href="mahasiswa.php">Data Mahasiswa</a>
         </nav>
     </header>
 
@@ -23,7 +23,7 @@
         <h2>Tambah Data Mahasiswa</h2>
 
         <div class="card">
-            <form action="mahasiswa.html" method="post">
+            <form action="mahasiswa.php" method="post">
 
                 <div class="form-group">
                     <label>Nama</label>
@@ -36,97 +36,23 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name="foto">
-                </div>
-
-                <div class="form-group">
-                    <label>UTS</label>
-                    <input type="number" name="uts">
-                </div>
-
-                <div class="form-group">
-                    <label>UAS</label>
-                    <input type="number" name="uas">
-                </div>
-
-                <div class="form-group">
-                    <label>Tugas</label>
-                    <input type="number" name="tugas">
-                </div>
-
-                <hr>
-
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password">
+                    <label>Prodi</label>
+                    <input type="text" name="prodi" required>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </div>
 
                 <div class="form-group">
                     <label>No HP</label>
-                    <input type="tel" name="no_hp">
+                    <input type="tel" name="no_hp" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Website</label>
-                    <input type="url" name="website">
-                </div>
-
-                <div class="form-group">
-                    <label>Tanggal Lahir</label>
-                    <input type="date" name="tgl_lahir">
-                </div>
-
-                <div class="form-group">
-                    <label>Warna Favorit</label>
-                    <input type="color" name="warna">
-                </div>
-
-                <div class="form-group">
-                    <label>Kepuasan</label>
-                    <select name="kepuasan">
-                        <option>Sangat Baik</option>
-                        <option>Baik</option>
-                        <option>Cukup</option>
-                        <option>Kurang</option>
-                        <option>Sangat Kurang</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Jenis Kelamin</label>
-                    <div class="inline">
-                        <input type="radio" name="kelamin" value="laki"> Laki-laki
-                        <input type="radio" name="kelamin" value="perempuan"> Perempuan
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Hobi</label>
-                    <div class="inline">
-                        <input type="checkbox" value="membaca"> Membaca
-                        <input type="checkbox" value="olahraga"> Olahraga
-                        <input type="checkbox" value="musik"> Musik
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Alamat</label>
-                    <textarea name="alamat"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>Jurusan</label>
-                    <select name="jurusan">
-                        <option>Teknik Informatika</option>
-                        <option>Sistem Informasi</option>
-                        <option>Teknologi Informasi</option>
-                    </select>
+                    <label>Foto</label>
+                    <input type="file" name="foto" accept="image/*" required>
                 </div>
 
                 <button type="submit">Submit</button>
