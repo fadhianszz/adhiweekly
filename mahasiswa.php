@@ -1,3 +1,11 @@
+<?php
+    $koneksi = mysqli_connect("localhost", "root", "", "faaweekly");
+
+    $query = "SELECT * FROM mahasiswa";
+
+    $result = mysqli_query($koneksi, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -42,7 +50,10 @@
                 <th>Foto</th>
                 <th>Aksi</th>
             </tr>
-
+            <?php
+                while ($mhs = mysqli_fetch_assoc($result))
+                {
+            ?>
             <tr>
                 <td>1</td>
                 <td>Fadhil Anshor</td>
@@ -65,6 +76,10 @@
                     </a>
                 </td>
             </tr>
+
+            <?php
+                };
+            ?>
 
         </table>
     </main>
