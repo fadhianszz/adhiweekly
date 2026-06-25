@@ -1,9 +1,7 @@
 <?php
-    $koneksi = mysqli_connect("localhost", "root", "", "faaweekly");
-
+    require 'fungsi.php';
     $query = "SELECT * FROM mahasiswa";
-
-    $result = mysqli_query($koneksi, $query);
+    $mahasiswas = tampildata($query);
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +42,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>NIM</th>
                 <th>Prodi</th>
                 <th>Email</th>
                 <th>No HP</th>
@@ -51,18 +50,19 @@
                 <th>Aksi</th>
             </tr>
             <?php
-                while ($mhs = mysqli_fetch_assoc($result))
+                $no = 1;
+                foreach ($mahasiswas as $mhs)
                 {
             ?>
             <tr>
-                <td>1</td>
-                <td>Fadhil Anshor</td>
-                <td>Teknologi Informasi</td>
-                <td>fadhilanshor24@gmail.com</td>
-                <td>0895706262900</td>
+                <td><?= $no++; ?></td>
+                <td><?= $mhs['nama']; ?></td>
+                <td><?= $mhs['nim']; ?></td>
+                <td><?= $mhs['prodi']; ?></td>
+                <td><?= $mhs['email']; ?></td>
+                <td><?= $mhs['no_hp']; ?></td>
                 <td>
-                    <img src="assets/image/meme bahlil.jpg"
-                         alt="Fadhil Anshor"
+                    <img src="assets/images/<?= $mhs['foto']; ?>" alt="<?= $mhs['nama']; ?>"
                          width="100">
                 </td>
                 <td>

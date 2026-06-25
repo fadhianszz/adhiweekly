@@ -1,3 +1,39 @@
+<?php
+    require 'fungsi.php';
+    if(isset($_POST['kirim']))
+    {
+        $nama = $_POST["nama"];
+        $nim = $_POST["nim"];
+        $prodi = $_POST["prodi"];
+        $email = $_POST["email"];
+        $no_hp = $_POST["no_hp"];
+        $foto = $_POST["foto"];
+
+        $query = "INSERT INTO mahasiswa (nama, nim, prodi, email, no_hp, foto)
+        VALUES ('$nama', '$nim', '$prodi', '$email', '$no_hp', '$foto')";
+        mysqli_query($koneksi, $query);
+
+        if (mysqli_affected_rows($koneksi) > 0)
+        {
+            echo "
+                <script>
+                    alert('Data berhasil ditambahkan!');
+                    window.location.href = 'mahasiswa.php';
+                </script>
+            ";
+        }
+        else
+        {
+            echo "
+                <script>
+                    alert('Data gagal ditambahkan!');
+                    window.location.href = 'mahasiswa.php';
+                </script>
+            ";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -23,39 +59,39 @@
         <h2>Tambah Data Mahasiswa</h2>
 
         <div class="card">
-            <form action="mahasiswa.php" method="post">
+            <form action="" method="post">
 
                 <div class="form-group">
                     <label>Nama</label>
-                    <input type="text" name="nama" required>
+                    <input type="text" id="nama" name="nama" required>
                 </div>
 
                 <div class="form-group">
                     <label>NIM</label>
-                    <input type="text" name="nim" required>
+                    <input type="text" id="nim" name="nim" required>
                 </div>
 
                 <div class="form-group">
                     <label>Prodi</label>
-                    <input type="text" name="prodi" required>
+                    <input type="text" id="prodi" name="prodi" required>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
                     <label>No HP</label>
-                    <input type="tel" name="no_hp" required>
+                    <input type="number" id="no_hp" name="no_hp" required>
                 </div>
 
                 <div class="form-group">
                     <label>Foto</label>
-                    <input type="file" name="foto" accept="image/*" required>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" name="kirim">Submit</button>
 
             </form>
         </div>
