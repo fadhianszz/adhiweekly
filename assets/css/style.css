@@ -158,32 +158,45 @@ h2 {
     background: #1565c0;
 }
 
+/* Tombol Aksi */
+.aksi{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
 .btn-edit,
-.btn-hapus {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
+.btn-hapus{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:90px;
+    height:38px;
+    border-radius:8px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    font-size:14px;
+    transition:.3s;
 }
 
-.btn-edit {
-    background: #43a047;
-    margin-right: 8px;
+.btn-edit{
+    background:#4CAF50;
 }
 
-.btn-edit:hover {
-    background: #2e7d32;
+.btn-edit:hover{
+    background:#2E7D32;
+    transform:translateY(-2px);
 }
 
-.btn-hapus {
-    background: #e53935;
+.btn-hapus{
+    background:#F44336;
 }
 
-.btn-hapus:hover {
-    background: #c62828;
+.btn-hapus:hover{
+    background:#C62828;
+    transform:translateY(-2px);
 }
 
 /* =========================

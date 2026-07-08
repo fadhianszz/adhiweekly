@@ -1,14 +1,21 @@
 <?php
     require 'fungsi.php';
+
+    $id = $_GET['id'];
+    $query = "SELECT * FROM mahasiswa WHERE id = $id";
+    $mhs = tampildata($query)[0];
+
+
+
     if(isset($_POST['kirim']))
     {
         
 
-        if (tambahdata($_POST, $_FILES['foto']) > 0)
+        if (editdata($_POST, $id) > 0)
         {
             echo "
                 <script>
-                    alert('Data berhasil ditambahkan!');
+                    alert('Data berhasil di edit!');
                     window.location.href = 'mahasiswa.php';
                 </script>
             ";
@@ -17,7 +24,7 @@
         {
             echo "
                 <script>
-                    alert('Data gagal ditambahkan!');
+                    alert('Data gagal di edit!');
                     window.location.href = 'mahasiswa.php';
                 </script>
             ";
@@ -30,7 +37,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Mahasiswa - TI UNIMUS</title>
+    <title>Edit Data Mahasiswa - TI UNIMUS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -47,42 +54,42 @@
     </header>
 
     <main>
-        <h2>Tambah Data Mahasiswa</h2>
+        <h2>Edit Data Mahasiswa</h2>
 
         <div class="card">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="post">
 
                 <div class="form-group">
                     <label>Nama</label>
-                    <input type="text" id="nama" name="nama" required>
+                    <input type="text" id="nama" name="nama" value="<?= $mhs['nama']; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>NIM</label>
-                    <input type="text" id="nim" name="nim" required>
+                    <input type="text" id="nim" name="nim" value="<?= $mhs['nim']; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>Prodi</label>
-                    <input type="text" id="prodi" name="prodi" required>
+                    <input type="text" id="prodi" name="prodi" value="<?= $mhs['prodi']; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" value="<?= $mhs['email']; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>No HP</label>
-                    <input type="number" id="no_hp" name="no_hp" required>
+                    <input type="number" id="no_hp" name="no_hp" value="<?= $mhs['no_hp']; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>Foto</label>
-                    <input type="file" id="foto" name="foto" accept="image/*" required>
+                    <input type="file" id="foto" name="foto" accept="image/*" value="<?= $mhs['foto']; ?>" required>
                 </div>
 
-                <button type="submit" name="kirim">Submit</button>
+                <button type="submit" name="kirim">Edit Data</button>
 
             </form>
         </div>

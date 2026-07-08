@@ -62,17 +62,17 @@
                 <td><?= $mhs['email']; ?></td>
                 <td><?= $mhs['no_hp']; ?></td>
                 <td>
-                    <img src="assets/images/<?= $mhs['foto']; ?>" alt="<?= $mhs['nama']; ?>"
+                    <img src="assets/image/<?= $mhs['foto']; ?>" alt="<?= $mhs['nama']; ?>"
                          width="100">
                 </td>
-                <td>
-                    <a href="editdata.php?id=1" class="btn-edit">
+                <td class="aksi">
+                    <a href="editdata.php?id=<?= $mhs['id']; ?>" class="btn-edit">
                     Edit
                     </a>
 
-                    <a href="hapusdata.php?id=1" class="btn-hapus"
-                    onclick="return confirm('Yakin ingin menghapus data ini?')">
-                    Hapus
+                    <a href="deletedata.php?id=<?= $mhs['id']; ?>" class="btn-hapus"
+                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                        Hapus
                     </a>
                 </td>
             </tr>
