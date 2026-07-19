@@ -350,3 +350,122 @@ footer {
 .sosmed:hover i{
     color:#fff;
 }
+
+
+/* Active Navbar */
+nav a.active{
+    background: white;
+    color: #1e88e5;
+    font-weight: bold;
+}
+
+nav a.active:hover{
+    background: white;
+    color: #1565c0;
+}
+
+
+/* Search Box */
+.search-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+.search-box input{
+    flex:1;
+    padding:12px;
+    border:2px solid #bbdefb;
+    border-radius:10px;
+    outline:none;
+}
+
+.search-box button{
+    width:120px;
+}
+
+.search-box{
+    margin:20px 0 30px;
+}
+
+.search-box form{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    max-width:650px;
+}
+
+.search-box input{
+    flex:1;
+    padding:14px 18px;
+    font-size:16px;
+    border:2px solid #90caf9;
+    border-radius:12px;
+    outline:none;
+    transition:.3s;
+    background:#fff;
+}
+
+.search-box input:focus{
+    border-color:#1e88e5;
+    box-shadow:0 0 8px rgba(30,136,229,.25);
+}
+
+.search-box button{
+    width:120px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#1e88e5;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#1565c0;
+    transform:translateY(-2px);
+}
+
+/* SEARCH */
+
+.search-box{
+    margin:20px 0;
+}
+
+.search-box form{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.search-box input{
+    width:350px;
+    height:45px;
+    padding:0 15px;
+    border:2px solid #90caf9;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.search-box input:focus{
+    outline:none;
+    border-color:#1e88e5;
+}
+
+.btn-search{
+    width:100px !important;
+    height:45px;
+    padding:0;
+    border:none;
+    border-radius:10px;
+    background:#1e88e5;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn-search:hover{
+    background:#1565c0;
+}

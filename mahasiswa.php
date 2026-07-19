@@ -1,6 +1,16 @@
 <?php
     require 'fungsi.php';
-    $query = "SELECT * FROM mahasiswa";
+    if(isset($_GET['keyword']) && $_GET['keyword'] != ""){
+    $keyword = $_GET['keyword'];
+
+    $query = "SELECT * FROM mahasiswa
+              WHERE nama LIKE '%$keyword%'
+              OR nim LIKE '%$keyword%'
+              OR prodi LIKE '%$keyword%'";
+    }else{
+        $query = "SELECT * FROM mahasiswa";
+    }
+
     $mahasiswas = tampildata($query);
 ?>
 
@@ -24,7 +34,7 @@
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="contact.php">Contact</a>
-            <a href="mahasiswa.php">Data Mahasiswa</a>
+            <a href="mahasiswa.php" class="active">Data Mahasiswa</a>
         </nav>
 
     </header>
@@ -35,6 +45,17 @@
             <a href="tambahdata.php" class="btn-tambah">
             + Tambah Data
             </a>
+
+            <div class="search-box">
+                <form action="" method="GET">
+                    <input type="text"
+                        name="keyword"
+                        placeholder="Cari nama, NIM, atau prodi..."
+                        value="<?= isset($_GET['keyword']) ? $_GET['keyword'] : ''; ?>">
+
+                    <button type="submit" class="btn-search">Cari</button>
+                </form>
+            </div>
 
         <br><br>
 
@@ -90,5 +111,14 @@
         <p>&copy; 2026 TI UNIMUS</p>
     </footer>
 
+    <script>
+        const keyword = document.querySelector('input[name="keyword"]');
+
+        keyword.addEventListener('input', function () {
+            if (this.value.trim() === '') {
+                window.location.href = 'mahasiswa.php';
+            }
+        });
+    </script>
 </body>
 </html>
