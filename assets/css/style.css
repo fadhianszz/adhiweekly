@@ -285,7 +285,7 @@ footer {
 }
 
 /* =========================
-   ABOUT & CONTACT
+   ABOUT
 ========================= */
 
 .about-page .card,
@@ -307,4 +307,46 @@ footer {
 .contact-page h3{
     color:#1565c0;
     margin-bottom:15px;
+}
+
+
+
+/* CONTACT */
+.contact-page .card{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.sosmed{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 20px;
+    margin:15px 0;
+    text-decoration:none;
+    color:#333;
+    border:2px solid #bbdefb;
+    border-radius:12px;
+    transition:.3s;
+    font-size:18px;
+    font-weight:600;
+}
+
+.sosmed i{
+    font-size:28px;
+    color:#1e88e5;
+}
+
+.sosmed:hover{
+    background:#1e88e5;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+.sosmed:hover i{
+    color:#fff;
 }

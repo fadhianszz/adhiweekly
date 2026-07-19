@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - TI UNIMUS</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body class="contact-page">
@@ -14,36 +17,41 @@
     <header>
         <h1>WEB TI UNIMUS</h1>
 
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="contact.php">Contact</a>
-            <a href="mahasiswa.php">Data Mahasiswa</a>
-        </nav>
+            <nav>
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact</a>
+                <a href="mahasiswa.php">Data Mahasiswa</a>
+            </nav>
     </header>
 
     <main>
 
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
 
-        <div class="card">
+    <div class="card">
 
-            <h3>Informasi Kontak</h3>
+        <a href="https://instagram.com/fadhil.adhi" target="_blank" class="sosmed">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
 
-            <p><strong>Nama</strong> : Fadhil Anshor</p>
-            <p><strong>NIM</strong> : 13242520005</p>
-            <p><strong>Program Studi</strong> : S1 Teknologi Informasi</p>
-            <p><strong>Email</strong> : fadhil@example.com</p>
-            <p><strong>No. HP</strong> : 08xxxxxxxxxx</p>
-            
-            <br>
+        <a href="https://github.com/fadhianszz" target="_blank" class="sosmed">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
 
-            <p>
-                Terima kasih telah mengunjungi website ini.
-                Kritik dan saran sangat membantu dalam pengembangan website.
-            </p>
+        <a href="https://www.tiktok.com/@fadhiladhii" target="_blank" class="sosmed">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
 
-        </div>
+        <a href="mailto:fadhilanshor24@gmail.com" class="sosmed">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+
+    </div>
 
     </main>
 
